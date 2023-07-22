@@ -1,0 +1,2000 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+
+
+/*====================================default=====================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    scroll-behavior: smooth;
+    --bg-color: #05263e;
+    --bg2-color: #081b29;
+    --text-color: white;
+    --main-color: #00abf0;
+    --heading-size: 6rem;
+    --heading-medium: 3rem;
+    --para-size: 1.7rem;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+.span-later {
+    color: var(--main-color);
+}
+
+
+
+
+/*==================================header====================================== */
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.2rem solid var(--main-color);
+    width: 100%;
+    background: var(--bg-color);
+    position: fixed;
+    z-index: 1;
+}
+
+/* logo */
+.logo {
+    margin: 1rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.logo a {
+    cursor: pointer;
+    margin-left: -25.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 4rem;
+}
+
+
+.hamburger {
+    display: none;
+    position: absolute;
+    right: 5rem;
+    top: 3rem;
+}
+
+.line {
+    width: 6rem;
+    background-color: var(--main-color);
+    height: 0.6rem;
+    margin: 0.6rem 0rem;
+}
+
+
+
+/* navigation */
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+
+
+.nav ul li a {
+    display: flex;
+    position: relative;
+    font-size: var(--para-size);
+    text-decoration: none;
+    margin: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.nav ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--main-color);
+    width: 0%;
+    overflow: hidden;
+    transition: 1s;
+    border-bottom: 0.2rem solid var(--main-color);
+}
+
+/* .nav ul li a.active {
+    color: var(--main-color);
+    border-bottom: 0.2rem solid var(--main-color);
+} */
+
+.nav ul li a:hover::before {
+    cursor: pointer;
+    width: 100%;
+}
+
+/* section */
+
+/* home */
+
+#home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100rem;
+    background: var(--bg2-color);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 76%, 0% 100%);
+}
+
+.image {
+    position: relative;
+    margin-bottom: 20rem;
+}
+
+.image-box {
+    text-align: center;
+    -webkit-mask-image: url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CiAgICAgICAgICAgICAgPHN2ZyBpZD0ic3ctanMtYmxvYi1zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgICAgICAgICAgPGRlZnM+IAogICAgICAgICAgICAgICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN3LWdyYWRpZW50IiB4MT0iMCIgeDI9IjEiIHkxPSIxIiB5Mj0iMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3RvcCBpZD0ic3RvcDEiIHN0b3AtY29sb3I9InJnYmEoMjQ4LCAxMTcsIDU1LCAxKSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDI1MSwgMTY4LCAzMSwgMSkiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9InVybCgjc3ctZ3JhZGllbnQpIiBkPSJNMjMuOSwtMjguNUMyOS4xLC0yNCwzMC40LC0xNC44LDMwLjksLTYuM0MzMS40LDIuMiwzMS4yLDEwLDI4LjYsMTguNUMyNiwyNi45LDIxLjIsMzYsMTMuOCwzOS4yQzYuNCw0Mi40LC0zLjYsMzkuOCwtMTIsMzUuNkMtMjAuNCwzMS40LC0yNy4zLDI1LjYsLTMwLjksMTguM0MtMzQuNiwxMS4xLC0zNSwyLjQsLTMzLjQsLTUuOEMtMzEuOCwtMTMuOSwtMjguMiwtMjEuNiwtMjIuMywtMjUuOUMtMTYuNCwtMzAuMywtOC4yLC0zMS4zLDAuNiwtMzJDOS4zLC0zMi42LDE4LjYsLTMyLjksMjMuOSwtMjguNVoiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwIDUwKSIgc3Ryb2tlLXdpZHRoPSIwIiBzdHlsZT0idHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZSAwczsiPjwvcGF0aD4KICAgICAgICAgICAgICA8L3N2Zz4=);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+    margin-left: 6rem;
+    margin-top: -6rem;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 45rem;
+    height: 50rem;
+    margin-top: 8rem;
+}
+
+.image-box2 {
+    text-align: center;
+    -webkit-mask-image: url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CiAgICAgICAgICAgICAgPHN2ZyBpZD0ic3ctanMtYmxvYi1zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgICAgICAgICAgPGRlZnM+IAogICAgICAgICAgICAgICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN3LWdyYWRpZW50IiB4MT0iMCIgeDI9IjEiIHkxPSIxIiB5Mj0iMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3RvcCBpZD0ic3RvcDEiIHN0b3AtY29sb3I9InJnYmEoMjQ4LCAxMTcsIDU1LCAxKSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDI1MSwgMTY4LCAzMSwgMSkiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9InVybCgjc3ctZ3JhZGllbnQpIiBkPSJNMjMuOSwtMjguNUMyOS4xLC0yNCwzMC40LC0xNC44LDMwLjksLTYuM0MzMS40LDIuMiwzMS4yLDEwLDI4LjYsMTguNUMyNiwyNi45LDIxLjIsMzYsMTMuOCwzOS4yQzYuNCw0Mi40LC0zLjYsMzkuOCwtMTIsMzUuNkMtMjAuNCwzMS40LC0yNy4zLDI1LjYsLTMwLjksMTguM0MtMzQuNiwxMS4xLC0zNSwyLjQsLTMzLjQsLTUuOEMtMzEuOCwtMTMuOSwtMjguMiwtMjEuNiwtMjIuMywtMjUuOUMtMTYuNCwtMzAuMywtOC4yLC0zMS4zLDAuNiwtMzJDOS4zLC0zMi42LDE4LjYsLTMyLjksMjMuOSwtMjguNVoiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwIDUwKSIgc3Ryb2tlLXdpZHRoPSIwIiBzdHlsZT0idHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZSAwczsiPjwvcGF0aD4KICAgICAgICAgICAgICA8L3N2Zz4=);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+    margin-left: 6rem;
+    margin-top: -6rem;
+}
+
+.image-box2 img {
+    width: 100%;
+    max-width: 45rem;
+    height: 50rem;
+    margin-top: 8rem;
+}
+
+.liquid-shape {
+    position: absolute;
+    width: 50rem;
+    height: 100%;
+    z-index: -1;
+    top: 10%;
+}
+
+.liquid-shape2 {
+    filter: blur(1rem);
+    position: absolute;
+    width: 50rem;
+    height: 100%;
+    z-index: -1;
+    top: 10%;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-left: 15rem;
+    margin-bottom: 10rem;
+}
+
+.content p {
+    margin-bottom: 0.2rem;
+    font-size: var(--para-size);
+    text-transform: capitalize;
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+
+.content h1 {
+    font-size: var(--heading-size);
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: -1rem 1rem;
+}
+
+.content h3 {
+    color: var(--text-color);
+    margin: -1rem 1rem;
+    font-size: var(--heading-medium);
+}
+
+.content h2 {
+    color: var(--text-color);
+    font-size: var(--heading-medium);
+}
+
+.typed,
+.typed-cursor {
+    color: var(--main-color);
+}
+
+.icon-item {
+    margin-bottom: 10rem;
+}
+
+
+.icon-item a {
+    display: flex;
+    /* border: 0.3rem solid var(--main-color);
+    border-radius: 50%; */
+    margin: 2rem 7rem;
+    text-decoration: none;
+    margin-right: -11rem;
+    /* width: 50px;
+    height: 100%;
+    position: relative;
+    z-index: 1; 
+    overflow: hidden;*/
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    /* background: var(--bg-color); */
+    border-radius: 50%;
+    border: 0.3rem solid var(--main-color);
+
+}
+
+.icon-item a i {
+    font-size: 2.5rem;
+    padding: 0.6rem;
+    color: var(--main-color);
+}
+
+.icon-item a i:hover {
+    color: var(--bg-color);
+}
+
+.icon-item a::before {
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    background: var(--main-color);
+    z-index: -1;
+    opacity: 1;
+    transition: 1s;
+}
+
+.icon-item a:hover::before {
+    width: 100%;
+}
+
+
+
+/*=============================About-me=================================*/
+
+#About-me {
+    display: flex;
+    position: relative;
+    margin-top: -14rem;
+    height: 100rem;
+}
+
+#About-me::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 108rem;
+    background: var(--bg2-color);
+    clip-path: polygon(0% 22%, 100% 0%, 100% 70%, 0% 100%);
+    z-index: -1;
+}
+
+#About-me .image {
+    margin-top: 25rem;
+}
+
+.about-content {
+    display: inline-flex;
+    flex-direction: column;
+    width: 45%;
+    margin-top: 33rem;
+    margin-left: 13rem;
+}
+
+.about-content p {
+    margin-bottom: 0.2rem;
+    font-size: var(--para-size);
+    text-transform: capitalize;
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.about-content h3 {
+    color: var(--text-color);
+    margin: -1rem 1rem;
+    font-size: var(--heading-medium);
+}
+
+.about-content h1 {
+    font-size: var(--heading-size);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+/*================================skills====================================*/
+
+#Skills {
+    position: relative;
+    margin-top: -13rem;
+    height: 100rem;
+}
+
+#Skills h1 {
+    font-size: var(--heading-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+.skill-boxes {
+    display: flex;
+    flex-direction: row;
+}
+
+#Skills::before {
+    content: '';
+    top: 0;
+    left: 0;
+    height: 125rem;
+    width: 100%;
+    position: absolute;
+    background: var(--bg2-color);
+    z-index: -1;
+    clip-path: polygon(0% 25%, 100% 0%, 100% 70%, 0% 100%);
+}
+
+.my-skills {
+    display: flex;
+    margin-top: 20rem;
+    position: absolute;
+    font-size: 10rem;
+    flex-direction: column;
+}
+
+.html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.3rem solid var(--main-color);
+    margin: 0rem 1rem;
+    height: 46rem;
+    padding: 0rem 2rem;
+    border-radius: 7rem;
+    background: var(--bg-color);
+    cursor: pointer;
+}
+
+.html:hover {
+    transform: scale(1.03);
+}
+
+.css:hover {
+    transform: scale(1.03);
+}
+
+.javascript:hover {
+    transform: scale(1.03);
+}
+
+.html i {
+    color: var(--main-color);
+}
+
+.html h2 {
+    font-size: var(--heading-medium);
+    color: var(--main-color);
+    border-bottom: 2rem solid var(--main-color);
+    border-bottom: 0.3rem solid var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.html p {
+    font-size: var(--para-size);
+    text-align: center;
+}
+
+.css {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.3rem solid var(--main-color);
+    margin: 0rem 1rem;
+    height: 46rem;
+    padding: 0rem 2rem;
+    border-radius: 7rem;
+    background: var(--bg-color);
+    cursor: pointer;
+}
+
+.css i {
+    color: var(--main-color);
+}
+
+.css h2 {
+    font-size: var(--heading-medium);
+    color: var(--main-color);
+    border-bottom: 0.3rem solid var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.css p {
+    font-size: var(--para-size);
+    text-align: center;
+}
+
+.javascript {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.3rem solid var(--main-color);
+    margin: 0rem 1rem;
+    height: 46rem;
+    padding: 0rem 2rem;
+    border-radius: 7rem;
+    background: var(--bg-color);
+    cursor: pointer;
+}
+
+.javascript i {
+    color: var(--main-color);
+}
+
+.javascript h2 {
+    font-size: var(--heading-medium);
+    color: var(--main-color);
+    border-bottom: 0.3rem solid var(--main-color);
+    margin-bottom: 1rem;
+
+}
+
+.javascript p {
+    font-size: var(--para-size);
+    text-align: center;
+}
+
+
+/*=============================portfolio============================*/
+
+#portfolio {
+    position: relative;
+    margin-top: -2rem;
+    height: 100rem;
+}
+
+#portfolio::before {
+    content: '';
+    top: 0;
+    left: 0;
+    height: 123rem;
+    width: 100%;
+    position: absolute;
+    background: var(--bg2-color);
+    z-index: -1;
+    clip-path: polygon(0% 31%, 100% 0%, 100% 70%, 0% 100%);
+}
+
+.my-portfolio {
+    padding-top: 28rem;
+}
+
+.port {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 156rem;
+    padding: 10rem;
+}
+
+.my-portfolio h1 {
+    font-size: var(--heading-size);
+    display: flex;
+    justify-content: center;
+}
+
+.shaiqs-cravebites {
+    padding: 1rem;
+}
+
+.shaiqs-cravebites img {
+    border: 0.3rem solid var(--main-color);
+    border-radius: 4rem;
+    height: 20rem;
+}
+
+.shaiqs-cravebites img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.dance-class {
+    padding: 1rem;
+}
+
+.dance-class img {
+    border: 0.3rem solid var(--main-color);
+    border-radius: 4rem;
+    height: 20rem;
+}
+
+.dance-class img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.boxing-club {
+    padding: 1rem;
+}
+
+.boxing-club img {
+    border: 0.3rem solid var(--main-color);
+    border-radius: 4rem;
+    height: 20rem;
+}
+
+.boxing-club img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.shaiqs-quotes {
+    padding: 1rem;
+}
+
+.shaiqs-quotes img {
+    border: 0.3rem solid var(--main-color);
+    border-radius: 4rem;
+    height: 20rem;
+}
+
+.shaiqs-quotes img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+/*===============================contact===============================*/
+
+#contact {
+    position: relative;
+    margin-top: -3rem;
+    height: 100rem;
+}
+
+
+.contact-me h1 {
+    font-size: var(--heading-size);
+    display: flex;
+    justify-content: center;
+    padding-top: 24rem;
+}
+
+#contact::before {
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100rem;
+    width: 100%;
+    position: absolute;
+    background: var(--bg2-color);
+    z-index: -1;
+    clip-path: polygon(0% 37%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.my-contact {
+    display: inline-block;
+    margin-left: 5rem;
+    margin-top: 10rem;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.email h2 {
+    font-size: var(--heading-medium);
+    margin-left: 2rem;
+}
+
+.email-i span {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    border: 0.3rem solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+}
+
+.email-me {
+    margin: 1.5rem 0rem;
+}
+
+.call {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.my-contact p {
+    font-size: var(--para-size);
+    padding-left: 7rem;
+}
+
+.call h2 {
+    font-size: var(--heading-medium);
+    margin-left: 2rem;
+}
+
+.call-i span {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    border: 0.3rem solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+}
+
+.call-me {
+    margin: 1.5rem 0rem;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.location h2 {
+    font-size: var(--heading-medium);
+    margin-left: 2rem;
+}
+
+.location-i span {
+    font-size: 2.5rem;
+    border-radius: 50%;
+    border: 0.3rem solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+}
+
+.my-contact img {
+    height: 20rem;
+    margin-left: 7rem;
+    border: 0.3rem solid var(--main-color);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.my-contact img:hover {
+    transform: scale(1.03);
+}
+
+.location-i i {
+    color: var(--main-color);
+}
+
+.call-i i {
+    color: var(--main-color);
+}
+
+.email-i i {
+    color: var(--main-color);
+}
+
+.email-i i:hover {
+    color: var(--bg2-color);
+}
+
+.call-i i:hover {
+    color: var(--bg2-color);
+}
+
+.location-i i:hover {
+    color: var(--bg2-color);
+}
+
+.email-i span::before {
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background: var(--main-color);
+    z-index: -1;
+    transition: 1s;
+    opacity: 1;
+}
+
+.call-i span::before {
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background: var(--main-color);
+    z-index: -1;
+    transition: 1s;
+    opacity: 1;
+}
+
+.location-i span::before {
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background: var(--main-color);
+    z-index: -1;
+    transition: 1s;
+    opacity: 1;
+}
+
+
+.email-i span:hover::before {
+    width: 100%;
+}
+
+.call-i span:hover::before {
+    width: 100%;
+}
+
+.location-i span:hover::before {
+    width: 100%;
+}
+
+.form {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 8rem;
+    margin-top: 10rem;
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input1 input,
+.input2 input {
+    width: 31rem;
+    /* height: 1rem; */
+    padding: 1rem;
+    margin: 0.5rem;
+    background: var(--bg-color);
+    border: 0.2rem solid var(--main-color);
+    border-radius: 1rem;
+    color: var(--main-color);
+}
+
+.form textarea {
+    margin-top: 1rem;
+    background: var(--bg-color);
+    border: 0.2rem solid var(--main-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--main-color);
+}
+
+.form .btn {
+    margin-top: 1rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 1rem;
+    padding: 1.1rem;
+    margin-top: 2rem;
+    color: var(--main-color);
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form .btn::before {
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: 1s;
+    opacity: 1;
+}
+
+.form .btn:hover::before {
+    width: 100%;
+}
+
+/*===============================footer================================*/
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    font-size: var(--para-size);
+    padding: 1rem;
+}
+
+#footer a {
+    text-decoration: none;
+    border-bottom: 0.1rem solid var(--main-color);
+}
+
+
+
+
+
+/*=======================================================================================================================================================================================mediaqueries==================================================================================================================================================================================================== */
+
+
+/*============================================================2490px========================================================== */
+
+@media (max-width: 2490px) {
+    html {
+        font-size: 100%;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+}
+
+
+/* ========================================================1895px============================================================== */
+
+@media (max-width: 1895px) {
+    html {
+        font-size: 80%;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+}
+
+
+/* =======================================================1525px=============================================================== */
+
+@media (max-width: 1525px) {
+    html {
+        font-size: 70%;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+}
+
+
+/* ====================================================1340px=================================================================== */
+
+@media (max-width: 1340px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+}
+
+
+/* ======================================================1200px================================================================= */
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 50%;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+}
+
+
+/*==============================================================955px========================================================= */
+
+@media (max-width: 955px) {
+
+    /* ========html========= */
+    html {
+        font-size: 40%;
+    }
+
+
+    /* ========navigation========= */
+    .logo a {
+        font-size: 6rem;
+        margin-left: -26rem;
+    }
+
+    .nav ul li a {
+        font-size: 2.5rem;
+    }
+
+    .nav {
+        position: relative;
+        right: -28rem;
+    }
+
+    /* ========home========= */
+    .content {
+        display: flex;
+        width: 111rem;
+        justify-content: center;
+    }
+
+    .image {
+        display: none;
+    }
+
+    /* ========about========= */
+    .about-content {
+        margin-top: 30rem;
+        width: 117rem;
+    }
+
+
+    .content h2 {
+        font-size: 5rem;
+    }
+
+    .content h1 {
+        font-size: 9rem;
+    }
+
+    .content h3 {
+        font-size: 5rem;
+    }
+
+    .content p {
+        font-size: 2.3rem;
+    }
+
+    .icon-item a i {
+        font-size: 5.5rem;
+    }
+
+    .about-content h1 {
+        font-size: 9rem;
+    }
+
+    .about-content h3 {
+        font-size: 5rem;
+    }
+
+    .about-content p {
+        font-size: 2.3rem;
+    }
+
+    /* ========skills========= */
+    #Skills h1 {
+        font-size: 9rem;
+    }
+
+    .skill-boxes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .html {
+        margin: 2rem;
+    }
+
+    .html h2 {
+        font-size: 5rem;
+    }
+
+    .html p {
+        font-size: 2.3rem;
+    }
+
+    .css {
+        margin: 2rem;
+    }
+
+    .css h2 {
+        font-size: 5rem;
+    }
+
+    .css p {
+        font-size: 2.3rem;
+    }
+
+    .javascript {
+        margin: 2rem;
+    }
+
+    .javascript h2 {
+        font-size: 5rem;
+    }
+
+    .javascript p {
+        font-size: 2.3rem;
+    }
+
+    #Skills::before {
+        height: 275rem;
+        clip-path: polygon(0% 12%, 100% 0%, 100% 70%, 0% 84%);
+    }
+
+    #Skills {
+        height: 210rem;
+    }
+
+    /* ========portfolio========= */
+    .my-portfolio h1 {
+        font-size: 9rem;
+    }
+
+    #portfolio {
+        height: 129rem
+    }
+
+    #portfolio::before {
+        height: 158rem;
+        clip-path: polygon(0% 25%, 100% 0%, 100% 70%, 0% 94%);
+    }
+
+    .shaiqs-cravebites img {
+        height: 30rem;
+    }
+
+    .dance-class img {
+        height: 30rem;
+    }
+
+    .boxing-club img {
+        height: 30rem;
+    }
+
+    .shaiqs-quotes img {
+        height: 30rem;
+    }
+
+    /* ========contact========= */
+    .contact-me h1 {
+        font-size: 9rem;
+    }
+
+    .email-i span {
+        font-size: 5.5rem;
+    }
+
+    .call-i span {
+        font-size: 5.5rem;
+    }
+
+    .location-i span {
+        font-size: 5.5rem;
+    }
+
+    .email h2 {
+        font-size: 5rem;
+    }
+
+    .call h2 {
+        font-size: 5rem;
+    }
+
+    .location h2 {
+        font-size: 5rem;
+    }
+
+    .my-contact p {
+        font-size: 2.3rem;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-contact {
+        display: flex;
+        order: 2;
+        margin-top: 5rem;
+    }
+
+    .location,
+    .my-contact img {
+        display: none;
+    }
+
+    .form {
+        display: flex;
+        order: 1;
+        width: 93rem;
+    }
+
+    #contact::before {
+        height: 128rem;
+        clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    #contact {
+        height: 128rem;
+    }
+
+    .input1 input,
+    .input2 input {
+        width: 45rem;
+    }
+
+    /* ========footer========= */
+    #footer {
+        font-size: 2.3rem;
+    }
+
+}
+
+
+/*==============================================================760px========================================================= */
+
+@media (max-width: 760px) {
+    html {
+        font-size: 30%;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+
+    #contact {
+        height: 142rem;
+    }
+
+    .logo a {
+        margin-left: -60rem;
+    }
+
+    #contact::before {
+        height: 142rem;
+        clip-path: polygon(0% 27%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        height: 80rem;
+        transition: all 0.7s ease-out;
+        overflow: hidden;
+    }
+
+    .logo a {
+        font-size: 8rem;
+        margin: 0;
+    }
+
+    .nav {
+        right: 0;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li a {
+        font-size: 4rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .h-class {
+        display: block;
+        height: 13rem;
+    }
+
+    .v-class {
+        display: block;
+        opacity: 0;
+    }
+
+
+
+
+}
+
+/*==============================================================570px========================================================= */
+@media (max-width: 570px) {
+    html {
+        font-size: 20%;
+    }
+
+
+
+    /* ========navigation========= */
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        height: 80rem;
+    }
+
+    .logo a {
+        font-size: 8rem;
+        margin: 10rem;
+    }
+
+    .nav {
+        right: 0;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li a {
+        font-size: 5rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .h-class {
+        display: block;
+        height: 13rem;
+    }
+
+    .v-class {
+        display: block;
+        opacity: 0;
+    }
+
+
+    /* ========home========= */
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        height: 230rem;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 96%);
+        align-items: flex-start;
+    }
+
+    .icon-item {
+        margin-bottom: 15rem;
+        display: flex;
+        margin-top: 20rem;
+    }
+
+    .icon-item a {
+        margin-right: 0;
+        margin: 0rem 2rem;
+    }
+
+    .content {
+        display: flex;
+        width: 111rem;
+        justify-content: center;
+        margin-left: 6rem;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+
+
+    .content h2 {
+        font-size: 7rem;
+    }
+
+    .content h1 {
+        font-size: 15rem;
+    }
+
+    .content h3 {
+        font-size: 7rem;
+    }
+
+    .content p {
+        font-size: 5rem;
+    }
+
+    .icon-item a i {
+        font-size: 7.5rem;
+    }
+
+    /* ========about========= */
+    .about-content h1 {
+        font-size: 15rem;
+    }
+
+    .about-content h3 {
+        font-size: 7rem;
+    }
+
+    .about-content p {
+        font-size: 5rem;
+    }
+
+    .about-content {
+        width: 110rem;
+        margin-left: 6rem;
+    }
+
+    #About-me {
+        height: 215rem;
+    }
+
+    #About-me::before {
+        height: 215rem;
+        clip-path: polygon(0% 12%, 100% 0%, 100% 84%, 0% 100%);
+    }
+
+    /* ========skills========= */
+    #Skills h1 {
+        font-size: 15rem;
+    }
+
+    .html {
+        margin: 10rem 15rem;
+        height: 135rem;
+    }
+
+    .html i {
+        font-size: 30rem;
+    }
+
+    .html h2 {
+        font-size: 7rem;
+    }
+
+    .html p {
+        font-size: 5rem;
+    }
+
+    .css {
+        margin: 10rem 15rem;
+        height: 135rem;
+    }
+
+    .css i {
+        font-size: 30rem;
+    }
+
+    .css h2 {
+        font-size: 7rem;
+    }
+
+    .css p {
+        font-size: 5rem;
+    }
+
+    .javascript {
+        margin: 10rem 15rem;
+        height: 135rem;
+    }
+
+    .javascript i {
+        font-size: 30rem;
+    }
+
+    .javascript h2 {
+        font-size: 7rem;
+    }
+
+    .javascript p {
+        font-size: 5rem;
+    }
+
+    #Skills::before {
+        height: 694rem;
+        clip-path: polygon(0% 5%, 100% 0%, 100% 77%, 0% 82%);
+    }
+
+    #Skills {
+        height: 560rem;
+    }
+
+    /* ========portfolio========= */
+    .my-portfolio h1 {
+        font-size: 15rem;
+    }
+
+    #portfolio {
+        height: 180rem
+    }
+
+    #portfolio::before {
+        height: 185rem;
+        clip-path: polygon(0% 19%, 100% 0%, 100% 83%, 0% 100%);
+    }
+
+    .shaiqs-cravebites img {
+        height: 40rem;
+    }
+
+    .dance-class img {
+        height: 40rem;
+    }
+
+    .boxing-club img {
+        height: 40rem;
+    }
+
+    .shaiqs-quotes img {
+        height: 40rem;
+    }
+
+    .port {
+        padding: 8rem;
+    }
+
+    /* ========contact========= */
+    .contact-me h1 {
+        font-size: 15rem;
+    }
+
+    .email-i span {
+        font-size: 7.5rem;
+    }
+
+    .call-i span {
+        font-size: 7.5rem;
+    }
+
+    .location-i span {
+        font-size: 7.5rem;
+    }
+
+    .email h2 {
+        font-size: 7rem;
+    }
+
+    .call h2 {
+        font-size: 7rem;
+    }
+
+    .location h2 {
+        font-size: 7rem;
+    }
+
+    .my-contact p {
+        font-size: 5rem;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-contact {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location,
+    .my-contact img {
+        display: none;
+    }
+
+    .form {
+        display: flex;
+        order: 1;
+        width: 105rem;
+    }
+
+    .form textarea {
+        border-radius: 5rem;
+        padding: 2rem;
+        font-size: 5rem;
+    }
+
+    #contact {
+        height: 235rem;
+    }
+
+    #contact::before {
+        height: 235rem;
+        clip-path: polygon(0% 13%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .form .btn {
+        border-radius: 3rem;
+        height: 13rem;
+    }
+
+    .input1 input,
+    .input2 input {
+        width: 50rem;
+        border-radius: 2rem;
+        padding: 2rem;
+        margin: 1rem;
+        font-size: 5rem;
+    }
+}
+
+/* ====================================================380px==================================================================== */
+
+@media screen and (max-width: 380px) {
+    html {
+        font-size: 15%;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        height: 100rem;
+    }
+
+    .logo a {
+        font-size: 8rem;
+        margin: 10rem;
+    }
+
+    .nav {
+        right: 0;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li a {
+        font-size: 6rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .h-class {
+        display: block;
+        height: 13rem;
+    }
+
+    .v-class {
+        display: block;
+        opacity: 0;
+    }
+
+
+
+}
+
+@media (max-width: 340px) {
+    html {
+        font-size: 10%;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        height: 100rem;
+    }
+
+    .logo a {
+        font-size: 8rem;
+        margin: 10rem;
+    }
+
+    .nav {
+        right: 0;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li a {
+        font-size: 6rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .h-class {
+        display: block;
+        height: 13rem;
+    }
+
+    .v-class {
+        display: block;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 300px) {
+    html {
+        font-size: 5%;
+    }
+
+
+    /* ========navigation========= */
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        height: 100rem;
+    }
+
+    .logo a {
+        font-size: 8rem;
+        margin: 10rem;
+    }
+
+    .nav {
+        right: 0;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li a {
+        font-size: 6rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .h-class {
+        display: block;
+        height: 13rem;
+    }
+
+    .v-class {
+        display: block;
+        opacity: 0;
+    }
+
+
+    /* ========home========= */
+
+    #home {
+        height: 350rem;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 87%, 0% 96%);
+    }
+
+    .icon-item {
+        margin-top: 45rem;
+    }
+
+    .content {
+        width: 250rem;
+    }
+
+    .about-content {
+        margin-top: 32rem;
+    }
+
+
+    .content h2 {
+        font-size: 15rem;
+    }
+
+    .content h1 {
+        font-size: 30rem;
+    }
+
+    .content h3 {
+        font-size: 15rem;
+    }
+
+    .content p {
+        font-size: 10rem;
+    }
+
+    .icon-item a i {
+        font-size: 20.5rem;
+    }
+
+    /* ========about========= */
+    .about-content h1 {
+        font-size: 30rem;
+    }
+
+    .about-content h3 {
+        font-size: 15rem;
+    }
+
+    .about-content p {
+        font-size: 10rem;
+    }
+
+    .about-content {
+        width: 250rem;
+    }
+
+    #About-me {
+        height: 300rem;
+    }
+
+    #About-me::before {
+        height: 300rem;
+        clip-path: polygon(0% 12%, 100% 0%, 100% 84%, 0% 96%);
+    }
+
+    /* ========skills========= */
+    #Skills h1 {
+        font-size: 30rem;
+    }
+
+    .html {
+        margin: 10rem 15rem;
+        height: 220rem;
+    }
+
+    .html i {
+        font-size: 50rem;
+    }
+
+    .html h2 {
+        font-size: 15rem;
+    }
+
+    .html p {
+        font-size: 10rem;
+    }
+
+    .css {
+        margin: 10rem 15rem;
+        height: 220rem;
+    }
+
+    .css i {
+        font-size: 50rem;
+    }
+
+    .css h2 {
+        font-size: 15rem;
+    }
+
+    .css p {
+        font-size: 10rem;
+    }
+
+    .javascript {
+        margin: 10rem 15rem;
+        height: 220rem;
+    }
+
+    .javascript i {
+        font-size: 50rem;
+    }
+
+    .javascript h2 {
+        font-size: 15rem;
+    }
+
+    .javascript p {
+        font-size: 10rem;
+    }
+
+    #Skills::before {
+        height: 1120rem;
+        clip-path: polygon(0% 3%, 100% 0%, 100% 77%, 0% 80%);
+    }
+
+    #Skills {
+        height: 900rem;
+    }
+
+    /* ========portfolio========= */
+    .my-portfolio h1 {
+        font-size: 30rem;
+    }
+
+    #portfolio {
+        height: 270rem
+    }
+
+    #portfolio::before {
+        height: 270rem;
+        clip-path: polygon(0% 13%, 100% 0%, 100% 85%, 0% 98%);
+    }
+
+    .shaiqs-cravebites img {
+        height: 60rem;
+    }
+
+    .dance-class img {
+        height: 60rem;
+    }
+
+    .boxing-club img {
+        height: 60rem;
+    }
+
+    .shaiqs-quotes img {
+        height: 60rem;
+    }
+
+    .port {
+        padding: 8rem;
+        max-width: 345rem;
+    }
+
+    /* ========contact========= */
+    .contact-me h1 {
+        font-size: 30rem;
+    }
+
+    .email-i span {
+        font-size: 15.5rem;
+    }
+
+    .call-i span {
+        font-size: 15.5rem;
+    }
+
+    .email h2 {
+        font-size: 15rem;
+    }
+
+    .call h2 {
+        font-size: 15rem;
+    }
+
+    .location h2 {
+        font-size: 15rem;
+    }
+
+    .my-contact p {
+        font-size: 10rem;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-contact {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location,
+    .my-contact img {
+        display: none;
+    }
+
+    .form {
+        display: flex;
+        order: 1;
+        width: 220rem;
+    }
+
+    .form textarea {
+        border-radius: 7rem;
+        padding: 4rem;
+        font-size: 7rem;
+    }
+
+    #contact {
+        height: 390rem;
+    }
+
+    #contact::before {
+        height: 390rem;
+        clip-path: polygon(0% 9%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .form .btn {
+        border-radius: 3rem;
+        height: 20rem;
+        font-size: 10rem;
+    }
+
+    .input1 input,
+    .input2 input {
+        width: 107rem;
+        border-radius: 4rem;
+        padding: 5rem;
+        font-size: 7rem;
+    }
+
+    /* =======footer========== */
+
+    #footer {
+        font-size: 8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================================================================================================================================================================KHATAM---SHOOTH============================================================================================================================================================================================= */
