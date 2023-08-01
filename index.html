@@ -4,322 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | www.shaiq.com</title>
+    <title>Shaiq-Portfolio | shaiqfolio.com</title>
 
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <!-- CSS link -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Third party links -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <header>
 
-        <div class="navigation h-class">
-            <div class="logo">
-                <a href="#home"><span class="span-later">S</span>HAIQ</a>
-            </div>
-            <div class="nav v-class">
-                <ul class="">
-                    <li><a href="#home" data-text="Home" class="active">Home</a></li>
-                    <li><a href="#About-me" data-text="About">About</a></li>
-                    <li><a href="#Skills" data-text="Skills">Skills</a></li>
-                    <li><a href="#portfolio" data-text="Portfolio">Portfolio</a></li>
-                    <li><a href="#contact" data-text="Contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+    <!-- navigation -->
+    <header id="navigation">
+        <h1><a href=""><span class="span-later">P</span>ortfolio</a></h1>
+        <ul class="nav hamnav">
+            <li><a href="#home" data-text="Home" class="active">Home</a></li>
+            <li><a href="#home" data-text="Skills">Skills</a></li>
+            <li><a href="#home" data-text="Services">Services</a></li>
+            <li><a href="#home" data-text="Portfolios">Portfolios</a></li>
+            <li><a href="#home" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class='bx bx-menu'></i>
         </div>
     </header>
 
     <!-- home -->
-    <section>
-        <div id="home">
-            <div class="icon-item">
-                <a href="https://www.facebook.com/Elbrus.Shaiq.3" target="_blank"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/ahmadshaiq159/" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href="https://twitter.com/AhmadShaiq159?t=jBpdZOr3HMHCh0ocyf9ytA&s=09" target="_blank"><i
-                        class='bx bxl-twitter'></i></a>
-                <a href="https://github.com/AhmadShaiq159" target="_blank"><i class='bx bxl-github'></i></a>
-            </div>
-            <div class="content">
-                <h2>Hello,It's Me</h2>
-                <h1><span class="span-later">A</span>hmad <span class="span-later">S</span>haiq</h1>
-                <h3>& I'am a <span class="typed"></span></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nemo dolor vel? Beatae amet vitae
-                    officiis dolorum, ea sunt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae labore
-                    consequatur debitis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam,
-                    consequatur atque culpa iure quod aperiam et laborum fugiat rerum similique?</p>
-            </div>
-            <div class="image">
-                <div class="image-box">
-                    <img src="img/homeBackground.png" alt="">
-                </div>
-                <div class="liquid-shape">
-                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-                        <path fill="#00abf0">
-                            <animate attributeName="d" dur="20000ms" repeatCount="indefinite" values="
-                                M442.5,303Q415,356,372.5,390.5Q330,425,273.5,452Q217,479,168,440Q119,401,93,352.5Q67,304,70.5,251Q74,198,100,152.5Q126,107,175.5,91.5Q225,76,282.5,65Q340,54,374,101.5Q408,149,439,199.5Q470,250,442.5,303Z;
-                                
-                                M430.74661,310.15424Q436.46272,370.30848,393.4517,419.62797Q350.44068,468.94747,287.29746,450.97797Q224.15424,433.00846,176.68729,410.87203Q129.22034,388.73559,94.53305,347.38983Q59.84576,306.04407,64.87881,251.51102Q69.91186,196.97797,79.0483,130.01525Q88.18474,63.05253,155.57033,63.39406Q222.95593,63.73559,284.03305,52.22457Q345.11017,40.71356,375.02203,95.3678Q404.9339,150.02203,414.9822,200.01102Q425.0305,250,430.74661,310.15424Z;
-
-                                M458.22183,309.58755Q435.1751,369.1751,387.22567,407.45135Q339.27625,445.72759,279.57586,452.23736Q219.87548,458.74712,160.00192,440.78409Q100.12836,422.82106,76.76457,365.23543Q53.40077,307.64981,64.1751,253.14981Q74.94942,198.64981,93.11091,144.52337Q111.27241,90.39693,165.89885,68.94942Q220.52529,47.50192,274.10115,63.22375Q327.67702,78.94558,370.87548,111.58563Q414.07394,144.22567,447.67125,197.11284Q481.26856,250,458.22183,309.58755Z;
-                                
-                                M442.34478,304.4639Q419.8917,358.9278,383.98556,411.54693Q348.07942,464.16605,284.54693,458.03971Q221.01444,451.91336,173.62274,422.32312Q126.23103,392.73287,69.47473,356.40975Q12.71843,320.08664,13.1354,250.47834Q13.55238,180.87005,52.18594,123.83034Q90.81951,66.79063,155.40975,52.87726Q220,38.9639,280.05776,46.36283Q340.11552,53.76175,399.20937,84.78341Q458.30323,115.80507,461.55054,182.90253Q464.79785,250,442.34478,304.4639Z;
-                                
-                                M472.27936,314.42645Q450.36327,378.85291,401.51727,426.09773Q352.67127,473.34255,286.83564,463.83909Q221,454.33564,171.74827,426.00345Q122.49655,397.67127,71.83564,357.66782Q21.17473,317.66436,45.615,257.50691Q70.05527,197.34945,87.53455,139.76555Q105.01382,82.18164,159.58736,43.07355Q214.16091,3.96545,282.33564,17.30455Q350.51036,30.64364,387.90573,83.83218Q425.30109,137.02073,459.74827,193.51036Q494.19545,250,472.27936,314.42645Z;
-                                
-                                M442.5,303Q415,356,372.5,390.5Q330,425,273.5,452Q217,479,168,440Q119,401,93,352.5Q67,304,70.5,251Q74,198,100,152.5Q126,107,175.5,91.5Q225,76,282.5,65Q340,54,374,101.5Q408,149,439,199.5Q470,250,442.5,303Z;
-                                ">
-                            </animate>
-                        </path>
-                    </svg>
-                </div>
-                <div class="liquid-shape2">
-                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-                        <path fill="#00abf0">
-                            <animate attributeName="d" dur="20000ms" repeatCount="indefinite" values="
-                                M442.5,303Q415,356,372.5,390.5Q330,425,273.5,452Q217,479,168,440Q119,401,93,352.5Q67,304,70.5,251Q74,198,100,152.5Q126,107,175.5,91.5Q225,76,282.5,65Q340,54,374,101.5Q408,149,439,199.5Q470,250,442.5,303Z;
-                                
-                                M430.74661,310.15424Q436.46272,370.30848,393.4517,419.62797Q350.44068,468.94747,287.29746,450.97797Q224.15424,433.00846,176.68729,410.87203Q129.22034,388.73559,94.53305,347.38983Q59.84576,306.04407,64.87881,251.51102Q69.91186,196.97797,79.0483,130.01525Q88.18474,63.05253,155.57033,63.39406Q222.95593,63.73559,284.03305,52.22457Q345.11017,40.71356,375.02203,95.3678Q404.9339,150.02203,414.9822,200.01102Q425.0305,250,430.74661,310.15424Z;
-
-                                M458.22183,309.58755Q435.1751,369.1751,387.22567,407.45135Q339.27625,445.72759,279.57586,452.23736Q219.87548,458.74712,160.00192,440.78409Q100.12836,422.82106,76.76457,365.23543Q53.40077,307.64981,64.1751,253.14981Q74.94942,198.64981,93.11091,144.52337Q111.27241,90.39693,165.89885,68.94942Q220.52529,47.50192,274.10115,63.22375Q327.67702,78.94558,370.87548,111.58563Q414.07394,144.22567,447.67125,197.11284Q481.26856,250,458.22183,309.58755Z;
-                                
-                                M442.34478,304.4639Q419.8917,358.9278,383.98556,411.54693Q348.07942,464.16605,284.54693,458.03971Q221.01444,451.91336,173.62274,422.32312Q126.23103,392.73287,69.47473,356.40975Q12.71843,320.08664,13.1354,250.47834Q13.55238,180.87005,52.18594,123.83034Q90.81951,66.79063,155.40975,52.87726Q220,38.9639,280.05776,46.36283Q340.11552,53.76175,399.20937,84.78341Q458.30323,115.80507,461.55054,182.90253Q464.79785,250,442.34478,304.4639Z;
-                                
-                                M472.27936,314.42645Q450.36327,378.85291,401.51727,426.09773Q352.67127,473.34255,286.83564,463.83909Q221,454.33564,171.74827,426.00345Q122.49655,397.67127,71.83564,357.66782Q21.17473,317.66436,45.615,257.50691Q70.05527,197.34945,87.53455,139.76555Q105.01382,82.18164,159.58736,43.07355Q214.16091,3.96545,282.33564,17.30455Q350.51036,30.64364,387.90573,83.83218Q425.30109,137.02073,459.74827,193.51036Q494.19545,250,472.27936,314.42645Z;
-                                
-                                M442.5,303Q415,356,372.5,390.5Q330,425,273.5,452Q217,479,168,440Q119,401,93,352.5Q67,304,70.5,251Q74,198,100,152.5Q126,107,175.5,91.5Q225,76,282.5,65Q340,54,374,101.5Q408,149,439,199.5Q470,250,442.5,303Z;
-                                ">
-                            </animate>
-                        </path>
-                    </svg>
-                </div>
-            </div>
+    <section id="home">
+        <div class="logo">
+            <a href="https://www.facebook.com/Elbrus.Shaiq.3" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/ahmadshaiq159/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://twitter.com/AhmadShaiq159?t=jBpdZOr3HMHCh0ocyf9ytA&s=09" target="_blank"><i
+                    class='bx bxl-twitter'></i></a>
+            <a href="https://github.com/AhmadShaiq159" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+        <div class="content">
+            <h2>Hello,It's me</h2>
+            <h1>Ahmad Shaiq</h1>
+            <h3>& I'am a <span class="type"><span class="typed"></span></span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non veniam enim libero at ad provident quidem
+                accusantium vel placeat, architecto maiores minus accusamus molestias porro illo ullam </p>
+            <button class="btn">More About Me</button>
+        </div>
+        <div class="image">
+            <img src="image/IMG_20220605_091506_4181.png" alt="">
         </div>
     </section>
-
-    <!-- about -->
-    <section>
-
-        <div id="About-me">
-            <div class="image">
-                <div class="image-box2">
-                    <img src="img/homeBackground2.png" alt="">
-                </div>
-                <div class="liquid-shape">
-                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-                        <path fill="#00abf0">
-                            <animate attributeName="d" dur="20000ms" repeatCount="indefinite" values="
-                            M442.5,303Q415,356,372.5,390.5Q330,425,273.5,452Q217,479,168,440Q119,401,93,352.5Q67,304,70.5,251Q74,198,100,152.5Q126,107,175.5,91.5Q225,76,282.5,65Q340,54,374,101.5Q408,149,439,199.5Q470,250,442.5,303Z;
-                            
-                            M430.74661,310.15424Q436.46272,370.30848,393.4517,419.62797Q350.44068,468.94747,287.29746,450.97797Q224.15424,433.00846,176.68729,410.87203Q129.22034,388.73559,94.53305,347.38983Q59.84576,306.04407,64.87881,251.51102Q69.91186,196.97797,79.0483,130.01525Q88.18474,63.05253,155.57033,63.39406Q222.95593,63.73559,284.03305,52.22457Q345.11017,40.71356,375.02203,95.3678Q404.9339,150.02203,414.9822,200.01102Q425.0305,250,430.74661,310.15424Z;
-                            
-                            M458.22183,309.58755Q435.1751,369.1751,387.22567,407.45135Q339.27625,445.72759,279.57586,452.23736Q219.87548,458.74712,160.00192,440.78409Q100.12836,422.82106,76.76457,365.23543Q53.40077,307.64981,64.1751,253.14981Q74.94942,198.64981,93.11091,144.52337Q111.27241,90.39693,165.89885,68.94942Q220.52529,47.50192,274.10115,63.22375Q327.67702,78.94558,370.87548,111.58563Q414.07394,144.22567,447.67125,197.11284Q481.26856,250,458.22183,309.58755Z;
-                            
-                            M442.34478,304.4639Q419.8917,358.9278,383.98556,411.54693Q348.07942,464.16605,284.54693,458.03971Q221.01444,451.91336,173.62274,422.32312Q126.23103,392.73287,69.47473,356.40975Q12.71843,320.08664,13.1354,250.47834Q13.55238,180.87005,52.18594,123.83034Q90.81951,66.79063,155.40975,52.87726Q220,38.9639,280.05776,46.36283Q340.11552,53.76175,399.20937,84.78341Q458.30323,115.80507,461.55054,182.90253Q464.79785,250,442.34478,304.4639Z;
-                            
-                            M472.27936,314.42645Q450.36327,378.85291,401.51727,426.09773Q352.67127,473.34255,286.83564,463.83909Q221,454.33564,171.74827,426.00345Q122.49655,397.67127,71.83564,357.66782Q21.17473,317.66436,45.615,257.50691Q70.05527,197.34945,87.53455,139.76555Q105.01382,82.18164,159.58736,43.07355Q214.16091,3.96545,282.33564,17.30455Q350.51036,30.64364,387.90573,83.83218Q425.30109,137.02073,459.74827,193.51036Q494.19545,250,472.27936,314.42645Z;
-                            
-                            M442.5,303Q415,356,372.5,390.5Q330,425,273.5,452Q217,479,168,440Q119,401,93,352.5Q67,304,70.5,251Q74,198,100,152.5Q126,107,175.5,91.5Q225,76,282.5,65Q340,54,374,101.5Q408,149,439,199.5Q470,250,442.5,303Z;
-                            ">
-                            </animate>
-                        </path>
-                    </svg>
-                </div>
-                <div class="liquid-shape2">
-                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-                        <path fill="#00abf0">
-                            <animate attributeName="d" dur="20000ms" repeatCount="indefinite" values="
-                        M442.5,303Q415,356,372.5,390.5Q330,425,273.5,452Q217,479,168,440Q119,401,93,352.5Q67,304,70.5,251Q74,198,100,152.5Q126,107,175.5,91.5Q225,76,282.5,65Q340,54,374,101.5Q408,149,439,199.5Q470,250,442.5,303Z;
-                                
-                                M430.74661,310.15424Q436.46272,370.30848,393.4517,419.62797Q350.44068,468.94747,287.29746,450.97797Q224.15424,433.00846,176.68729,410.87203Q129.22034,388.73559,94.53305,347.38983Q59.84576,306.04407,64.87881,251.51102Q69.91186,196.97797,79.0483,130.01525Q88.18474,63.05253,155.57033,63.39406Q222.95593,63.73559,284.03305,52.22457Q345.11017,40.71356,375.02203,95.3678Q404.9339,150.02203,414.9822,200.01102Q425.0305,250,430.74661,310.15424Z;
-                                
-                                M458.22183,309.58755Q435.1751,369.1751,387.22567,407.45135Q339.27625,445.72759,279.57586,452.23736Q219.87548,458.74712,160.00192,440.78409Q100.12836,422.82106,76.76457,365.23543Q53.40077,307.64981,64.1751,253.14981Q74.94942,198.64981,93.11091,144.52337Q111.27241,90.39693,165.89885,68.94942Q220.52529,47.50192,274.10115,63.22375Q327.67702,78.94558,370.87548,111.58563Q414.07394,144.22567,447.67125,197.11284Q481.26856,250,458.22183,309.58755Z;
-                                
-                                M442.34478,304.4639Q419.8917,358.9278,383.98556,411.54693Q348.07942,464.16605,284.54693,458.03971Q221.01444,451.91336,173.62274,422.32312Q126.23103,392.73287,69.47473,356.40975Q12.71843,320.08664,13.1354,250.47834Q13.55238,180.87005,52.18594,123.83034Q90.81951,66.79063,155.40975,52.87726Q220,38.9639,280.05776,46.36283Q340.11552,53.76175,399.20937,84.78341Q458.30323,115.80507,461.55054,182.90253Q464.79785,250,442.34478,304.4639Z;
-                                
-                                M472.27936,314.42645Q450.36327,378.85291,401.51727,426.09773Q352.67127,473.34255,286.83564,463.83909Q221,454.33564,171.74827,426.00345Q122.49655,397.67127,71.83564,357.66782Q21.17473,317.66436,45.615,257.50691Q70.05527,197.34945,87.53455,139.76555Q105.01382,82.18164,159.58736,43.07355Q214.16091,3.96545,282.33564,17.30455Q350.51036,30.64364,387.90573,83.83218Q425.30109,137.02073,459.74827,193.51036Q494.19545,250,472.27936,314.42645Z;
-                                
-                                M442.5,303Q415,356,372.5,390.5Q330,425,273.5,452Q217,479,168,440Q119,401,93,352.5Q67,304,70.5,251Q74,198,100,152.5Q126,107,175.5,91.5Q225,76,282.5,65Q340,54,374,101.5Q408,149,439,199.5Q470,250,442.5,303Z;
-                                ">
-                            </animate>
-                        </path>
-                    </svg>
-                </div>
-            </div>
-
-            <div class="about-content">
-                <h1>About <span class="span-later">Me</span></h1>
-                <h3>Frontend Developer!</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius iste doloribus recusandae eligendi
-                    porro voluptatibus voluptas, dolores consectetur, corrupti molestiae placeat explicabo expedita
-                    assumenda minima iusto maxime molestias? Incidunt, perferendis officiis? Placeat eos molestias nemo
-                    ab ut excepturi? At perspiciatis distinctio reic iendis impedit ab odit molestias, rem laudantium
-                    maiores laboriosam, labore commodi. Odio fugiat fugit velit omnis esse rem nostrum quibusdam.</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Skills -->
-
-    <section>
-        <div id="Skills">
-            <div class="my-skills">
-                <h1> <span class="span-later">S</span>kills</h1>
-                <div class="skill-boxes">
-                    <div class="html">
-                        <i class='bx bxl-html5'></i>
-                        <h2 data-text="HTML">HTML</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, maiores voluptatum non
-                            pariatur
-                            quam reprehenderit iste sint laudantium vitae temporibus illum, nobis similique ipsa
-                            molestias
-                            odit nisi? Officia distinctio ea similique fugit quisquam architecto aspernatur consequatur
-                            sapiente? Aut, magni accusantium?</p>
-                    </div>
-                    <div class="css">
-                        <i class='bx bxl-css3'></i>
-                        <h2>CSS</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, maiores voluptatum non
-                            pariatur
-                            quam reprehenderit iste sint laudantium vitae temporibus illum, nobis similique ipsa
-                            molestias
-                            odit nisi? Officia distinctio ea similique fugit quisquam architecto aspernatur consequatur
-                            sapiente? Aut, magni accusantium?</p>
-                    </div>
-                    <div class="javascript">
-                        <i class='bx bxl-javascript'></i>
-                        <h2>JavaScript</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, maiores voluptatum non
-                            pariatur
-                            quam reprehenderit iste sint laudantium vitae temporibus illum, nobis similique ipsa
-                            molestias
-                            odit nisi? Officia distinctio ea similique fugit quisquam architecto aspernatur consequatur
-                            sapiente? Aut, magni accusantium?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- portfolio -->
-
-    <section>
-        <div id="portfolio">
-            <div class="my-portfolio">
-                <h1><span class="span-later">P</span>ortfolio</h1>
-                <div class="port">
-                    <div class="shaiqs-cravebites">
-                        <img src="img/shaiqscravebites.jpg" alt="">
-                    </div>
-                    <div class="dance-class">
-                        <img src="img/danceclass.jpg" alt="">
-                    </div>
-                    <div class="boxing-club">
-                        <img src="img/boxingbox.jpg" alt="">
-                    </div>
-                    <div class="shaiqs-quotes">
-                        <img src="img/shaiqsquotes.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- contact -->
-
-    <section>
-        <div id="contact">
-
-            <div class="contact-me">
-                <h1><span class="span-later">C</span>ontact</h1>
-
-                <div class="contact-form">
-
-                    <div class="my-contact">
-
-                        <div class="email-me">
-                            <div class="email">
-                                <div class="email-i">
-                                    <span><i class='bx bxs-envelope'></i></span>
-                                </div>
-                                <h2>Email <span class="span-later">me</span></h1>
-                            </div>
-                            <p>ahmadshaiq159@gmail.com</p>
-                        </div>
-
-
-                        <div class="call-me">
-                            <div class="call">
-                                <div class="call-i">
-                                    <span><i class='bx bxs-phone-call'></i></span>
-                                </div>
-                                <h2>Call <span class="span-later">me</span></h1>
-                            </div>
-                            <p>+XX XXXXXXXXXX</p>
-                        </div>
-
-
-                        <div class="my-location">
-                            <div class="location">
-                                <div class="location-i">
-                                    <span><i class='bx bx-current-location'></i></span>
-                                </div>
-                                <h2>Locat<span class="span-later">ion</span></h1>
-                            </div>
-                            <img src="img/location.jpg" alt="">
-                        </div>
-                    </div>
-
-                    <form action="" class="form">
-                        <div class="input1">
-                            <input type="text" name="name" id="name" placeholder="Full Name">
-                            <input type="email" name="email" id="email" placeholder="Email Address">
-                        </div>
-                        <div class="input2">
-                            <input type="tel" name="tel" id="tel" placeholder="Phone Number">
-                            <input type="subject" name="subject" id="subject" placeholder="Email Subject">
-                        </div>
-                        <textarea name="message" id="message" cols="30" rows="10"
-                            placeholder="Write a message"></textarea>
-                        <button class="btn">Send message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- footer -->
-
-    <footer>
-        <div id="footer">
-            <p>Copyright <span class="span-later">&copy;</span> 2023 by <a href=""><span
-                        class="span-later">www.shaiq.com</span></a> | All Rights Reserved.</p>
-        </div>
-    </footer>
 
 
     <!-- typed -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-    <!-- scrollreveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
     <!-- js -->
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
