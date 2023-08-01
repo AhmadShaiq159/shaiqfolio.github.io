@@ -117,11 +117,6 @@ body {
     border-bottom: 0.2rem solid var(--main-color);
 }
 
-.nav ul li a.active{
-    color: var(--main-color);
-    border-bottom: 0.2rem solid var(--main-color);
-}
-
 .nav ul li a:hover::before {
     cursor: pointer;
     width: 100%;
