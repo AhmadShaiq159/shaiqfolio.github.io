@@ -30,7 +30,31 @@ href.addEventListener('click', () => {
 })
 
 
+// ==================================active navbar==========================================
+// let list = document.querySelectorAll('.nav li');
 
+// function activeLink() {
+//     list.forEach((item) =>
+//         item.classList.remove('active'));
+//     this.classList.add('active')
+// };
+
+// list.forEach((item) =>
+//     item.addEventListener('click', activeLink));
+
+var navContainer = document.getElementsByClassName("nav");
+
+// Get all buttons with class="btn" inside the container
+var items = navContainer.getElementsByClassName("item");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < items.length; i++) {
+    items[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
 
 
 
