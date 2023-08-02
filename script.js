@@ -29,7 +29,7 @@ href.addEventListener('click', () => {
     navigation.classList.toggle('h-class');
 })
 
-
-
-
-
+const line = document.querySelector('.bx-menu')
+line.onclick = () => {
+    line.classList.toggle('bx-x');
+}

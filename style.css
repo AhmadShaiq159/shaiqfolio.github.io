@@ -11,6 +11,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: white;
+    text-decoration: none;
+    list-style: none;
 }
 
 html {
@@ -45,30 +47,26 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-bottom: 0.2rem solid var(--main-color);
     width: 100%;
     background: var(--bg-color);
     position: fixed;
     z-index: 1;
+    padding: 0rem 5rem
 }
 
 /* logo */
 .logo {
-    margin: 1rem;
     font-weight: bold;
-    margin-left: 0.5rem;
     animation: goBottom 1.5s ease forwards;
 }
 
 .logo a {
     cursor: pointer;
-    margin-left: -25.5rem;
     color: var(--text-color);
-    text-decoration: none;
     font-size: 4rem;
 }
-
 
 .hamburger {
     display: none;
@@ -78,11 +76,9 @@ body {
     animation: goLeft 1.5s ease forwards;
 }
 
-.line {
-    width: 6rem;
-    background-color: var(--main-color);
-    height: 0.6rem;
-    margin: 0.6rem 0rem;
+.hamburger i {
+    font-size: 8rem;
+    color: var(--main-color);
 }
 
 
@@ -91,7 +87,6 @@ body {
 
 .nav ul {
     display: flex;
-    list-style: none;
 }
 
 
@@ -100,7 +95,6 @@ body {
     display: flex;
     position: relative;
     font-size: var(--para-size);
-    text-decoration: none;
     margin: 2rem;
     font-weight: bold;
     color: var(--text-color);
@@ -290,7 +284,6 @@ body {
 .icon-item a {
     display: flex;
     margin: 2rem 7rem;
-    text-decoration: none;
     margin-right: -11rem;
     position: relative;
     overflow: hidden;
@@ -972,7 +965,6 @@ body {
 }
 
 #footer a {
-    text-decoration: none;
     border-bottom: 0.1rem solid var(--main-color);
 }
 
@@ -1407,6 +1399,13 @@ body {
     .hamburger {
         display: flex;
         flex-direction: column;
+    }
+
+    .hamburger i {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .h-class {
