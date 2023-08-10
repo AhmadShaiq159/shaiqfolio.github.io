@@ -231,8 +231,8 @@
                     <div class="boxing-club">
                         <img src="img/boxingbox.jpg" alt="">
                     </div>
-                    <div class="shaiqs-quotes">
-                        <img src="img/shaiqsquotes.jpg" alt="">
+                    <div class="shaiqsportolio">
+                        <img src="img/shaiqportfolio.png" alt="">
                     </div>
                 </div>
             </div>
@@ -259,7 +259,7 @@
                                 </div>
                                 <h2>Email <span class="span-later">me</span></h1>
                             </div>
-                            <p>ahmadshaiq159@gmail.com</p>
+                            <p>ahmadshaiq159<span class="span-later">@gmail.com</span></p>
                         </div>
 
 
@@ -270,7 +270,7 @@
                                 </div>
                                 <h2>Call <span class="span-later">me</span></h1>
                             </div>
-                            <p>+XX XXXXXXXXXX</p>
+                            <p><span class="span-later">+92</span> 3242374349</p>
                         </div>
 
 
@@ -281,22 +281,27 @@
                                 </div>
                                 <h2>Locat<span class="span-later">ion</span></h1>
                             </div>
-                            <img src="img/location.jpg" alt="">
+                            <a href="https://www.google.com/maps/place/Gulzar+e+Hunza/@24.921618,67.0018889,167m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3eb33fe30ff0b033:0x7d44f4e52279a4d5!2sGulzar+e+Hunza!8m2!3d24.9215263!4d67.0025498!16s%2Fg%2F11dzssx4wq!3m5!1s0x3eb33fe30ff0b033:0x7d44f4e52279a4d5!8m2!3d24.9215263!4d67.0025498!16s%2Fg%2F11dzssx4wq?entry=ttu"
+                                target="_blank"><img src="img/location.jpg" alt=""></a>
                         </div>
                     </div>
 
-                    <form action="" class="form">
+                    <form class="form" action="https://formspree.io/f/xrgwpqjv" method="POST">
                         <div class="input1">
-                            <input type="text" name="name" id="name" placeholder="Full Name">
-                            <input type="email" name="email" id="email" placeholder="Email Address">
+                            <input type="text" name="name" id="name" placeholder="Full Name" required
+                                autocomplete="off">
+                            <input type="email" name="email" id="email" placeholder="Email Address" required
+                                autocomplete="off">
                         </div>
                         <div class="input2">
-                            <input type="tel" name="tel" id="tel" placeholder="Phone Number">
-                            <input type="subject" name="subject" id="subject" placeholder="Email Subject">
+                            <input type="number" name="Number" id="tel" placeholder="Phone Number" required
+                                autocomplete="off">
+                            <input type="subject" name="subject" id="subject" placeholder="Email Subject" required
+                                autocomplete="off">
                         </div>
-                        <textarea name="message" id="message" cols="30" rows="10"
-                            placeholder="Write a message"></textarea>
-                        <button class="btn">Send message</button>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write a message" required
+                            autocomplete="off" minlength="5"></textarea>
+                        <button type="submit" class="btn">Send message</button>
                     </form>
                 </div>
             </div>
@@ -313,6 +318,8 @@
         </div>
     </footer>
 
+    <!-- CDN for sending cantact on gmail -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- typed -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>

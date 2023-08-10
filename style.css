@@ -38,6 +38,29 @@ body {
     color: var(--main-color);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* =================================scrollbar============================ */
+
+::-webkit-scrollbar {
+    background: linear-gradient(var(--main-color), var(--bg2-color), #0b4359);
+    width: 10px;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+    border-radius: 3rem;
+}
 
 
 
@@ -448,18 +471,6 @@ body {
     animation: goRight 1.5s ease forwards;
 }
 
-.html:hover {
-    transform: scale(1.03);
-}
-
-.css:hover {
-    transform: scale(1.03);
-}
-
-.javascript:hover {
-    transform: scale(1.03);
-}
-
 .html i {
     color: var(--main-color);
 }
@@ -566,7 +577,7 @@ body {
 }
 
 .port {
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -582,66 +593,70 @@ body {
 }
 
 .shaiqs-cravebites {
-    padding: 1rem;
     animation: goRight 1.5s ease forwards;
+    overflow: hidden;
+    border: 0.3rem solid var(--main-color);
+    border-radius: 4rem;
 }
 
 .shaiqs-cravebites img {
-    border: 0.3rem solid var(--main-color);
-    border-radius: 4rem;
     height: 20rem;
+    transition: 0.5s;
 }
 
 .shaiqs-cravebites img:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
 .dance-class {
-    padding: 1rem;
     animation: goBottom 1.5s ease forwards;
+    border: 0.3rem solid var(--main-color);
+    border-radius: 4rem;
+    overflow: hidden;
 }
 
 .dance-class img {
-    border: 0.3rem solid var(--main-color);
-    border-radius: 4rem;
     height: 20rem;
+    transition: 0.5s;
 }
 
 .dance-class img:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
 .boxing-club {
-    padding: 1rem;
     animation: goTop 1.5s ease forwards;
+    border: 0.3rem solid var(--main-color);
+    border-radius: 4rem;
+    overflow: hidden;
 }
 
 .boxing-club img {
-    border: 0.3rem solid var(--main-color);
-    border-radius: 4rem;
     height: 20rem;
+    transition: 0.5s;
 }
 
 .boxing-club img:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
-.shaiqs-quotes {
-    padding: 1rem;
+.shaiqsportolio {
     animation: goLeft 1.5s ease forwards;
-}
-
-.shaiqs-quotes img {
     border: 0.3rem solid var(--main-color);
     border-radius: 4rem;
-    height: 20rem;
+    overflow: hidden;
 }
 
-.shaiqs-quotes img:hover {
-    transform: scale(1.03);
+.shaiqsportolio img {
+    height: 20rem;
+    transition: 0.5s;
+}
+
+.shaiqsportolio img:hover {
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -793,10 +808,6 @@ body {
     animation: goRight 1.5s ease forwards;
     animation-delay: 0.3s;
     opacity: 0;
-}
-
-.my-contact img:hover {
-    transform: scale(1.03);
 }
 
 .location-i i {
@@ -1115,16 +1126,10 @@ body {
     /* ========navigation========= */
     .logo a {
         font-size: 6rem;
-        margin-left: -26rem;
     }
 
     .nav ul li a {
         font-size: 2.5rem;
-    }
-
-    .nav {
-        position: relative;
-        right: -28rem;
     }
 
     /* ========home========= */
@@ -1264,7 +1269,7 @@ body {
         height: 30rem;
     }
 
-    .shaiqs-quotes img {
+    .shaiqsportolio img {
         height: 30rem;
     }
 
@@ -1438,8 +1443,12 @@ body {
         height: 80rem;
     }
 
+    .hamburger i {
+        font-size: 14rem;
+    }
+
     .logo a {
-        font-size: 8rem;
+        font-size: 13rem;
         margin: 10rem;
     }
 
@@ -1464,7 +1473,7 @@ body {
 
     .h-class {
         display: block;
-        height: 13rem;
+        height: 20rem;
     }
 
     .v-class {
@@ -1484,9 +1493,10 @@ body {
     }
 
     .icon-item {
-        margin-bottom: 15rem;
+        margin-bottom: 5rem;
         display: flex;
-        margin-top: 20rem;
+        margin-top: 35rem;
+        margin-left: 3rem;
     }
 
     .icon-item a {
@@ -1650,7 +1660,7 @@ body {
         height: 40rem;
     }
 
-    .shaiqs-quotes img {
+    .shaiqsportolio img {
         height: 40rem;
     }
 
@@ -1741,13 +1751,18 @@ body {
         margin: 1rem;
         font-size: 5rem;
     }
+
+    /* footer */
+    footer p {
+        font-size: 3rem;
+    }
 }
 
 /* ====================================================380px==================================================================== */
 
 @media screen and (max-width: 380px) {
     html {
-        font-size: 15%;
+        font-size: 18%;
     }
 
     .about-content {
@@ -1761,7 +1776,7 @@ body {
     }
 
     .logo a {
-        font-size: 8rem;
+        font-size: 12rem;
         margin: 10rem;
     }
 
@@ -1786,7 +1801,7 @@ body {
 
     .h-class {
         display: block;
-        height: 13rem;
+        height: 19rem;
     }
 
     .v-class {
@@ -1814,7 +1829,7 @@ body {
     }
 
     .logo a {
-        font-size: 8rem;
+        font-size: 12rem;
         margin: 10rem;
     }
 
@@ -1839,7 +1854,7 @@ body {
 
     .h-class {
         display: block;
-        height: 13rem;
+        height: 20rem;
     }
 
     .v-class {
@@ -1862,7 +1877,7 @@ body {
     }
 
     .logo a {
-        font-size: 8rem;
+        font-size: 20rem;
         margin: 10rem;
     }
 
@@ -1885,9 +1900,13 @@ body {
         flex-direction: column;
     }
 
+    .hamburger i {
+        font-size: 20rem;
+    }
+
     .h-class {
         display: block;
-        height: 13rem;
+        height: 30rem;
     }
 
     .v-class {
@@ -2053,7 +2072,7 @@ body {
         height: 60rem;
     }
 
-    .shaiqs-quotes img {
+    .shaiqsportolio img {
         height: 60rem;
     }
 
