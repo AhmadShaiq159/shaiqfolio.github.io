@@ -33,3 +33,12 @@ const line = document.querySelector('.bx-menu')
 line.onclick = () => {
     line.classList.toggle('bx-x');
 }
+
+
+// =====================================loading==================================================
+
+let loading = document.getElementById('loading');
+
+window.addEventListener('load', function () {
+    loading.style.display = 'none';
+})
